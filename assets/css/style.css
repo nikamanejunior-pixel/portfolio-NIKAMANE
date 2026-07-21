@@ -15,7 +15,7 @@
 
   :root{
     --bg:#080a0f; --panel:#12151f; --panel2:#1a1f2e; --line:#272d3d;
-    --txt:#e8ebf2; --muted:#93a0b5; --faint:#606c82;
+    --txt:#e8ebf2; --muted:#fafafa; --faint:#606c82;
     --gold:#e0a012; --gold2:#ffd34e; --gold-soft:rgba(224,160,18,.12);
     --on-accent:#241701;
     --ill-bg1:#12151f; --ill-bg2:#241d0e; --ill-line:#ffd34e; --ill-dim:#e0a012; --ill-muted:#93a0b5;
@@ -28,11 +28,11 @@
 
   /* ===== THÈME CLAIR (blanc / bleu / noir) ===== */
   [data-theme="light"]{
-    --bg:#f6f8fc; --panel:#ffffff; --panel2:#eef2f9; --line:#dfe5ef;
-    --txt:#0c1424; --muted:#54637d; --faint:#8593aa;
+    --bg:#f6f8fc; --panel:#b8dbfe92; --panel2:#fefeff; --line:#cdd0d2e3;
+    --txt:#010203; --muted:#2c3139; --faint:#46484bdc;
     --gold:#1450e0; --gold2:#2563eb; --gold-soft:rgba(20,80,224,.09);
     --on-accent:#ffffff;
-    --ill-bg1:#eef3ff; --ill-bg2:#dbe6ff; --ill-line:#1450e0; --ill-dim:#5b8cf0; --ill-muted:#8593aa;
+    --ill-bg1:#eef3ff; --ill-bg2:#dbe6ff; --ill-line:#d2e0ff; --ill-dim:#5b8cf0; --ill-muted:#8593aa;
     --net-line:20,80,224; --net-dot:37,99,235;
     --net-c1:37,99,235; --net-c2:14,165,233; --net-c3:124,58,237; --net-c4:6,182,212;
     --hero-glow1:59,130,246; --hero-glow2:124,58,237; --hero-glow3:6,182,212;
