@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doucha Nikamane Jr — Portfolio</title>
+<meta name="description" content="Portfolio de Doucha Nikamane Junior, Ingénieur des Travaux des Télécoms, spécialisation informatique et réseaux.">
+
+<!-- Polices -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Bootstrap (grille responsive + menu mobile) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Styles du site -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Icônes : le sprite SVG est injecté ici au chargement -->
+<script src="assets/js/icons.js"></script>
+
+
+<!-- ============ NAV (Bootstrap responsive) ============ -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Doucha Nikamane <span>JUNIOR</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Menu">
+      <svg class="ic"><use href="#ic-bars"/></svg>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav_skills">Expertise</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projets" data-i18n="nav_projects">Projets</a></li>
+        <li class="nav-item"><a class="nav-link" href="#parcours" data-i18n="nav_path">Parcours</a></li>
+        <li class="nav-item"><a class="nav-link nav-cta" href="#contact" data-i18n="nav_contact">Me contacter</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0 d-flex gap-2">
+          <button class="lang-toggle" id="themeBtn" aria-label="Changer de thème" title="Thème clair / sombre"><svg class="ic" id="themeIcon"><use href="#ic-sun"/></svg></button>
+          <button class="lang-toggle" id="langBtn" aria-label="Switch language"><svg class="ic"><use href="#ic-globe"/></svg><span>EN</span></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="container hero-inner">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8 order-2 order-lg-1 reveal">
+        <span class="eyebrow"><svg class="ic"><use href="#ic-broadcast"/></svg><span data-i18n="hero_eyebrow">Ingénieur des Travaux des Télécoms · Informatique &amp; Réseaux</span></span>
+        <h1 data-i18n="hero_title">Des réseaux qui connectent, des systèmes qui <em>résistent</em>.</h1>
+        <p class="sub" data-i18n="hero_sub">Je suis Doucha Nikamane Junior. J'administre des infrastructures systèmes et réseaux, je les sécurise, et je développe les solutions qui font tourner l'entreprise.</p>
+        <div class="cta-row">
+          <a class="btn-x primary" href="#projets"><svg class="ic"><use href="#ic-folder-open"/></svg><span data-i18n="hero_cta1">Découvrir mes projets</span></a>
+          <a class="btn-x secondary" href="#contact"><svg class="ic"><use href="#ic-paper-plane"/></svg><span data-i18n="hero_cta2">Me contacter</span></a>
+        </div>
+      </div>
+      <div class="col-lg-4 order-1 order-lg-2 reveal">
+        <div class="portrait">
+          <div class="ring">
+            <div class="inner">
+             <!-- <img src="photo.jpg"
+               alt="Doucha Nikamane Junior">
+              -->  
+               <svg class="ic"><use href="#ic-user"/></svg>
+            </div>
+          </div>
+          <div class="tag"><svg class="ic"><use href="#ic-shield-halved"/></svg><span data-i18n="portrait_tag">Réseau &amp; Sécurité</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats reveal">
+      <div class="stat"><b>8</b><small data-i18n="stat1">projets réalisés</small></div>
+      <div class="stat"><b>8+</b><small data-i18n="stat2">certifications &amp; formations</small></div>
+      <div class="stat"><b>3</b><small data-i18n="stat3">expériences terrain</small></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ EXPERTISE ============ -->
+<section id="skills">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker"><svg class="ic"><use href="#ic-layer"/></svg><span data-i18n="skills_kicker">Expertise</span></span>
+      <h2 data-i18n="skills_title">Domaines d'expertise</h2>
+      <p data-i18n="skills_sub">De l'infrastructure au logiciel, une même exigence de fiabilité.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="skill">
+          <div class="ico"><svg class="ic"><use href="#ic-server"/></svg></div>
+          <h3 data-i18n="skill1_t">Administration systèmes &amp; réseaux</h3>
+          <p data-i18n="skill1_d">Déploiement et gestion de serveurs, annuaires d'entreprise, services réseau et interconnexion d'équipements.</p>
+          <div class="chip-row">
+            <span class="chip"><svg class="ic"><use href="#ic-linux"/></svg>Linux</span>
+            <span class="chip"><svg class="ic"><use href="#ic-folder-tree"/></svg>LDAP</span>
+            <span class="chip"><svg class="ic"><use href="#ic-share"/></svg>Samba</span>
+            <span class="chip"><svg class="ic"><use href="#ic-network"/></svg>Cisco</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="skill">
+          <div class="ico"><svg class="ic"><use href="#ic-shield-halved"/></svg></div>
+          <h3 data-i18n="skill2_t">Sécurité défensive des systèmes</h3>
+          <p data-i18n="skill2_d">Durcissement de systèmes, défense du réseau, analyse d'intrusions en environnement de laboratoire contrôlé.</p>
+          <div class="chip-row">
+            <span class="chip"><svg class="ic"><use href="#ic-lock"/></svg><span data-i18n="chip_hardening">Durcissement</span></span>
+            <span class="chip"><svg class="ic"><use href="#ic-shield"/></svg><span data-i18n="chip_netdef">Défense réseau</span></span>
+            <span class="chip"><svg class="ic"><use href="#ic-bug"/></svg>Pentest lab</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <div class="skill">
+          <div class="ico"><svg class="ic"><use href="#ic-gears"/></svg></div>
+          <h3 data-i18n="skill3_t">Développement de solutions d'entreprise</h3>
+          <p data-i18n="skill3_d">Conception d'outils et d'applications métier qui répondent aux besoins concrets des organisations.</p>
+          <div class="chip-row">
+            <span class="chip"><svg class="ic"><use href="#ic-code"/></svg><span data-i18n="chip_apps">Applications métier</span></span>
+            <span class="chip"><svg class="ic"><use href="#ic-comments"/></svg><span data-i18n="chip_com">Communication</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJETS ============ -->
+<section id="projets">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker"><svg class="ic"><use href="#ic-diagram"/></svg><span data-i18n="proj_kicker">Réalisations</span></span>
+      <h2 data-i18n="proj_title">Projets sélectionnés</h2>
+      <p data-i18n="proj_sub">Des réalisations concrètes, de l'infrastructure à la sécurité.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-4 reveal">
+        <article class="card-x">
+          <div class="thumb" data-project="proj1">
+            <svg viewBox="0 0 400 158" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--ill-bg1)"/><stop offset="1" stop-color="var(--ill-bg2)"/></linearGradient></defs>
+              <rect width="400" height="158" fill="url(#g1)"/>
+              <g stroke="var(--ill-line)" stroke-width="1.4" fill="none" opacity=".9">
+                <rect x="150" y="46" width="100" height="66" rx="8" fill="var(--ill-dim)" fill-opacity=".08"/>
+                <path d="M200 46 v-16 M200 112 v16 M150 79 h-22 M250 79 h22"/>
+                <circle cx="200" cy="79" r="15" fill="var(--ill-line)" fill-opacity=".15"/>
+                <path d="M193 79 l5 5 l9 -11" stroke-width="2"/>
+              </g>
+              <g fill="var(--ill-dim)"><circle cx="128" cy="79" r="4"/><circle cx="272" cy="79" r="4"/><circle cx="200" cy="30" r="4"/><circle cx="200" cy="128" r="4"/></g>
+              <g fill="var(--ill-line)" opacity=".5"><circle cx="60" cy="40" r="2"/><circle cx="340" cy="120" r="2"/><circle cx="330" cy="35" r="2"/><circle cx="55" cy="120" r="2"/></g>
+            </svg>
+          </div>
+          <div class="body">
+            <h3 data-i18n="proj1_t">Laboratoire d'intrusion de systèmes</h3>
+            <p data-i18n="proj1_d">Conception d'un environnement de test isolé pour l'étude des techniques d'intrusion : machines vulnérables, scénarios d'attaque et mesures de défense associées.</p>
+            <div class="chip-row"><span class="chip"><svg class="ic"><use href="#ic-desktop"/></svg>Virtualisation</span><span class="chip"><svg class="ic"><use href="#ic-bug"/></svg>Pentest</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <article class="card-x">
+          <div class="thumb" data-project="proj2">
+            <svg viewBox="0 0 400 158" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--ill-bg1)"/><stop offset="1" stop-color="var(--ill-bg2)"/></linearGradient></defs>
+              <rect width="400" height="158" fill="url(#g2)"/>
+              <g stroke="var(--ill-dim)" stroke-width="1.4" opacity=".8"><path d="M200 40 L110 110 M200 40 L290 110 M200 40 L200 118" fill="none"/></g>
+              <g><rect x="176" y="20" width="48" height="34" rx="6" fill="var(--ill-bg2)" stroke="var(--ill-line)" stroke-width="1.4"/><rect x="86" y="98" width="48" height="34" rx="6" fill="var(--ill-bg2)" stroke="var(--ill-dim)" stroke-width="1.4"/><rect x="176" y="98" width="48" height="34" rx="6" fill="var(--ill-bg2)" stroke="var(--ill-dim)" stroke-width="1.4"/><rect x="266" y="98" width="48" height="34" rx="6" fill="var(--ill-bg2)" stroke="var(--ill-dim)" stroke-width="1.4"/></g>
+              <g fill="var(--ill-line)"><rect x="184" y="28" width="32" height="3" rx="1.5"/><rect x="184" y="35" width="20" height="3" rx="1.5"/></g>
+              <g fill="var(--ill-muted)"><rect x="94" y="106" width="32" height="2.5" rx="1"/><rect x="184" y="106" width="32" height="2.5" rx="1"/><rect x="274" y="106" width="32" height="2.5" rx="1"/></g>
+            </svg>
+          </div>
+          <div class="body">
+            <h3 data-i18n="proj2_t">Infrastructure réseau LDAP &amp; Samba</h3>
+            <p data-i18n="proj2_d">Mise en place d'un réseau d'entreprise avec annuaire centralisé LDAP et partage de fichiers Samba : authentification unifiée des utilisateurs et gestion des droits d'accès.</p>
+            <div class="chip-row"><span class="chip"><svg class="ic"><use href="#ic-folder-tree"/></svg>LDAP</span><span class="chip"><svg class="ic"><use href="#ic-share"/></svg>Samba</span><span class="chip"><svg class="ic"><use href="#ic-linux"/></svg>Linux</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal">
+        <article class="card-x">
+          <div class="thumb" data-project="proj3">
+            <svg viewBox="0 0 400 158" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--ill-bg1)"/><stop offset="1" stop-color="var(--ill-bg2)"/></linearGradient></defs>
+              <rect width="400" height="158" fill="url(#g3)"/>
+              <g fill="none" stroke="var(--ill-line)" stroke-width="1.4" opacity=".85"><path d="M140 70 q0 -26 26 -26 h68 q26 0 26 26 v18 q0 26 -26 26 h-54 l-24 20 v-20 q-16 0 -16 -22 z"/></g>
+              <g fill="var(--ill-dim)"><circle cx="170" cy="79" r="5"/><circle cx="200" cy="79" r="5"/><circle cx="230" cy="79" r="5"/></g>
+              <g stroke="var(--ill-dim)" stroke-width="1.2" opacity=".5"><path d="M100 50 q-14 0 -14 14 M300 50 q14 0 14 14" fill="none"/></g>
+              <g fill="var(--ill-line)" opacity=".55"><circle cx="86" cy="64" r="2.5"/><circle cx="314" cy="64" r="2.5"/></g>
+            </svg>
+          </div>
+          <div class="body">
+            <h3 data-i18n="proj3_t">SAS de communication d'entreprise</h3>
+            <p data-i18n="proj3_d">Développement d'une solution de communication interne sécurisée pour l'entreprise : échanges centralisés et maîtrise des flux d'information.</p>
+            <div class="chip-row"><span class="chip"><svg class="ic"><use href="#ic-comments"/></svg><span data-i18n="chip_com2">Communication</span></span><span class="chip"><svg class="ic"><use href="#ic-lock"/></svg><span data-i18n="chip_sec">Sécurité</span></span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- PROJET 4 : PyÉcole -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <article class="card-x">
+          <div class="thumb" data-project="proj4">
+            <svg viewBox="0 0 400 158" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--ill-bg1)"/><stop offset="1" stop-color="var(--ill-bg2)"/></linearGradient></defs>
+              <rect width="400" height="158" fill="url(#g4)"/>
+              <rect x="112" y="30" width="176" height="98" rx="8" fill="var(--ill-bg2)" stroke="var(--ill-line)" stroke-width="1.4"/>
+              <rect x="112" y="30" width="176" height="18" rx="8" fill="var(--ill-dim)" fill-opacity=".25"/>
+              <g fill="var(--ill-line)" opacity=".8"><circle cx="124" cy="39" r="3"/><circle cx="134" cy="39" r="3"/><circle cx="144" cy="39" r="3"/></g>
+              <g fill="var(--ill-dim)"><rect x="126" y="62" width="52" height="4" rx="2"/><rect x="126" y="76" width="86" height="4" rx="2"/><rect x="126" y="90" width="40" height="4" rx="2"/><rect x="126" y="104" width="68" height="4" rx="2"/></g>
+              <g fill="var(--ill-line)" opacity=".55"><rect x="186" y="62" width="30" height="4" rx="2"/><rect x="222" y="76" width="24" height="4" rx="2"/></g>
+              <path d="M232 96 l14 10 l-14 10" fill="none" stroke="var(--ill-line)" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="body">
+            <h3><span data-i18n="proj4_t">PyÉcole — plateforme d'apprentissage Python</span><span class="badge-done"><svg class="ic"><use href="#ic-check"/></svg><span data-i18n="proj_done">terminé</span></span></h3>
+            <p data-i18n="proj4_d">Plateforme web permettant aux étudiants d'apprendre Python par la pratique : cinq niveaux progressifs, exercices vérifiés directement dans le navigateur, examens de passage et classement des apprenants.</p>
+            <div class="chip-row"><span class="chip"><svg class="ic"><use href="#ic-python"/></svg>Pyodide</span><span class="chip"><svg class="ic"><use href="#ic-database"/></svg>Supabase</span><span class="chip"><svg class="ic"><use href="#ic-js"/></svg>JavaScript</span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- PROJET 5 : Portfolio -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <article class="card-x">
+          <div class="thumb" data-project="proj5">
+            <svg viewBox="0 0 400 158" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--ill-bg1)"/><stop offset="1" stop-color="var(--ill-bg2)"/></linearGradient></defs>
+              <rect width="400" height="158" fill="url(#g5)"/>
+              <rect x="104" y="28" width="192" height="102" rx="8" fill="var(--ill-bg2)" stroke="var(--ill-dim)" stroke-width="1.4"/>
+              <rect x="104" y="28" width="192" height="16" rx="8" fill="var(--ill-dim)" fill-opacity=".2"/>
+              <circle cx="140" cy="72" r="16" fill="none" stroke="var(--ill-line)" stroke-width="1.6"/>
+              <circle cx="140" cy="66" r="5" fill="var(--ill-line)"/>
+              <path d="M130 84 q10 -9 20 0" fill="none" stroke="var(--ill-line)" stroke-width="1.6"/>
+              <g fill="var(--ill-dim)"><rect x="170" y="60" width="72" height="5" rx="2.5"/><rect x="170" y="74" width="94" height="4" rx="2"/><rect x="170" y="86" width="56" height="4" rx="2"/></g>
+              <g fill="var(--ill-line)" opacity=".7"><rect x="122" y="104" width="34" height="10" rx="5"/><rect x="164" y="104" width="34" height="10" rx="5"/></g>
+            </svg>
+          </div>
+          <div class="body">
+            <h3 data-i18n="proj5_t">Portfolio personnel bilingue</h3>
+            <p data-i18n="proj5_d">Ce site : une page unique en français et en anglais, avec galerie de projets, animations au défilement et formulaire de contact, hébergée en statique et pensée pour rester rapide et autonome.</p>
+            <div class="chip-row"><span class="chip"><svg class="ic"><use href="#ic-html5"/></svg>HTML/CSS</span><span class="chip"><svg class="ic"><use href="#ic-js"/></svg>jQuery</span><span class="chip"><svg class="ic"><use href="#ic-browser"/></svg>Bootstrap</span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- PROJET 6 : Gestion hôtelière (en cours) -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <article class="card-x">
+          <div class="thumb" data-project="proj6">
+            <svg viewBox="0 0 400 158" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--ill-bg1)"/><stop offset="1" stop-color="var(--ill-bg2)"/></linearGradient></defs>
+              <rect width="400" height="158" fill="url(#g6)"/>
+              <rect x="146" y="26" width="108" height="106" rx="6" fill="var(--ill-bg2)" stroke="var(--ill-line)" stroke-width="1.4"/>
+              <g fill="var(--ill-dim)" opacity=".85">
+                <rect x="158" y="40" width="18" height="14" rx="2"/><rect x="186" y="40" width="18" height="14" rx="2"/><rect x="214" y="40" width="18" height="14" rx="2"/>
+                <rect x="158" y="62" width="18" height="14" rx="2"/><rect x="186" y="62" width="18" height="14" rx="2"/><rect x="214" y="62" width="18" height="14" rx="2"/>
+                <rect x="158" y="84" width="18" height="14" rx="2"/><rect x="214" y="84" width="18" height="14" rx="2"/>
+              </g>
+              <rect x="186" y="84" width="18" height="14" rx="2" fill="var(--ill-line)"/>
+              <rect x="186" y="108" width="28" height="24" rx="2" fill="var(--ill-dim)" fill-opacity=".3" stroke="var(--ill-line)" stroke-width="1.2"/>
+              <g stroke="var(--ill-line)" stroke-width="1.4" fill="none" opacity=".6"><path d="M146 26 h-28 M254 26 h28"/></g>
+              <g fill="var(--ill-line)" opacity=".5"><circle cx="112" cy="26" r="2.5"/><circle cx="288" cy="26" r="2.5"/></g>
+            </svg>
+          </div>
+          <div class="body">
+            <h3><span data-i18n="proj6_t">Système de gestion hôtelière</span><span class="badge-progress" data-i18n="proj_wip">en cours</span></h3>
+            <p data-i18n="proj6_d">Application de gestion pour établissement hôtelier : suivi des chambres et de leur disponibilité, réservations, clients et facturation, centralisés dans une interface unique.</p>
+            <div class="chip-row"><span class="chip"><svg class="ic"><use href="#ic-hotel"/></svg><span data-i18n="chip_mgmt">Gestion</span></span><span class="chip"><svg class="ic"><use href="#ic-database"/></svg><span data-i18n="chip_db">Base de données</span></span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- PROJET 7 : Gestion de l'état civil (en cours) -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <article class="card-x">
+          <div class="thumb" data-project="proj7">
+            <svg viewBox="0 0 400 158" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--ill-bg1)"/><stop offset="1" stop-color="var(--ill-bg2)"/></linearGradient></defs>
+              <rect width="400" height="158" fill="url(#g7)"/>
+              <rect x="132" y="24" width="120" height="112" rx="6" fill="var(--ill-bg2)" stroke="var(--ill-dim)" stroke-width="1.4"/>
+              <rect x="146" y="38" width="92" height="84" rx="4" fill="none" stroke="var(--ill-line)" stroke-width="1.2" opacity=".55"/>
+              <circle cx="172" cy="62" r="11" fill="none" stroke="var(--ill-line)" stroke-width="1.6"/>
+              <circle cx="172" cy="58" r="4" fill="var(--ill-line)"/>
+              <path d="M165 72 q7 -6 14 0" fill="none" stroke="var(--ill-line)" stroke-width="1.6"/>
+              <g fill="var(--ill-dim)"><rect x="192" y="54" width="34" height="4" rx="2"/><rect x="192" y="64" width="26" height="4" rx="2"/></g>
+              <g fill="var(--ill-dim)" opacity=".7"><rect x="158" y="90" width="68" height="3.5" rx="1.75"/><rect x="158" y="100" width="54" height="3.5" rx="1.75"/><rect x="158" y="110" width="40" height="3.5" rx="1.75"/></g>
+              <circle cx="252" cy="118" r="16" fill="var(--ill-bg2)" stroke="var(--ill-line)" stroke-width="1.6"/>
+              <path d="M245 118 l5 5 l9 -11" fill="none" stroke="var(--ill-line)" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="body">
+            <h3><span data-i18n="proj7_t">Système de gestion de l'état civil</span><span class="badge-progress" data-i18n="proj_wip2">en cours</span></h3>
+            <p data-i18n="proj7_d">Solution de numérisation des registres d'état civil : enregistrement et consultation des actes, recherche des dossiers et délivrance de documents officiels.</p>
+            <div class="chip-row"><span class="chip"><svg class="ic"><use href="#ic-idcard"/></svg><span data-i18n="chip_registry">Registre</span></span><span class="chip"><svg class="ic"><use href="#ic-database"/></svg><span data-i18n="chip_db2">Base de données</span></span></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- PROJET 8 : Test de débit (en cours) -->
+      <div class="col-md-6 col-lg-4 reveal">
+        <article class="card-x">
+          <div class="thumb" data-project="proj8">
+            <svg viewBox="0 0 400 158" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="g8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="var(--ill-bg1)"/><stop offset="1" stop-color="var(--ill-bg2)"/></linearGradient></defs>
+              <rect width="400" height="158" fill="url(#g8)"/>
+              <path d="M138 108 a62 62 0 1 1 124 0" fill="none" stroke="var(--ill-dim)" stroke-width="9" stroke-linecap="round" opacity=".28"/>
+              <path d="M138 108 a62 62 0 0 1 46 -59.9" fill="none" stroke="var(--ill-line)" stroke-width="9" stroke-linecap="round"/>
+              <g stroke="var(--ill-line)" stroke-width="2" opacity=".5" stroke-linecap="round">
+                <path d="M152 78 l7 4"/><path d="M200 60 v8"/><path d="M248 78 l-7 4"/>
+              </g>
+              <line x1="200" y1="108" x2="167" y2="72" stroke="var(--ill-line)" stroke-width="3.4" stroke-linecap="round"/>
+              <circle cx="200" cy="108" r="8" fill="var(--ill-bg2)" stroke="var(--ill-line)" stroke-width="2.6"/>
+              <g fill="var(--ill-dim)"><rect x="176" y="124" width="48" height="4" rx="2"/></g>
+              <g fill="var(--ill-line)" opacity=".55"><circle cx="86" cy="52" r="2.5"/><circle cx="314" cy="52" r="2.5"/><circle cx="72" cy="112" r="2"/><circle cx="328" cy="112" r="2"/></g>
+            </svg>
+          </div>
+          <div class="body">
+            <h3><span data-i18n="proj8_t">Application de test de débit</span><span class="badge-progress" data-i18n="proj_wip3">en cours</span></h3>
+            <p data-i18n="proj8_d">Outil de mesure de la qualité d'une connexion Internet : débit descendant et montant, latence et stabilité de la liaison, avec historique des mesures pour suivre les performances dans le temps.</p>
+            <div class="chip-row"><span class="chip"><svg class="ic"><use href="#ic-gauge"/></svg><span data-i18n="chip_measure">Mesure réseau</span></span><span class="chip"><svg class="ic"><use href="#ic-wifi"/></svg><span data-i18n="chip_qos">Qualité de service</span></span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARCOURS ============ -->
+<section id="parcours">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker"><svg class="ic"><use href="#ic-timeline"/></svg><span data-i18n="path_kicker">Parcours</span></span>
+      <h2 data-i18n="path_title">Formation &amp; expériences</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <small>2026</small>
+        <h3 data-i18n="tl1_t">Ingénieur des Travaux des Télécoms — SUP'PTIC</h3>
+        <p data-i18n="tl1_d">École Nationale Supérieure des Postes, Télécommunications et TIC. Spécialisation informatique et réseaux.</p>
+      </div>
+      <div class="tl-item reveal">
+        <small>2025</small>
+        <h3 data-i18n="tl2_t">Bénévole — UNIFAC 2025, SUP'PTIC</h3>
+        <p data-i18n="tl2_d">Participation à l'organisation et au support technique de l'événement pendant 7 jours.</p>
+      </div>
+      <div class="tl-item reveal">
+        <small data-i18n="tl_internship">Stage · 2 mois</small>
+        <h3 data-i18n="tl3_t">Assistant service CESIR — Camtel</h3>
+        <p data-i18n="tl3_d">Appui aux équipes du service CESIR de l'opérateur historique des télécommunications au Cameroun.</p>
+      </div>
+      <div class="tl-item reveal">
+        <small data-i18n="tl_internship2">Stage · 2 mois</small>
+        <h3 data-i18n="tl4_t">Administrateur réseau — Hôtel des Députés</h3>
+        <p data-i18n="tl4_d">Administration du réseau de l'établissement : gestion des équipements, des accès et du support utilisateurs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section id="certifs">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker"><svg class="ic"><use href="#ic-certificate"/></svg><span data-i18n="cert_kicker">Certifications</span></span>
+      <h2 data-i18n="cert_title">Certifications &amp; formations</h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 col-lg-6 reveal"><div class="cert"><span class="c-ico"><svg class="ic"><use href="#ic-shield-halved"/></svg></span><div><b data-i18n="cert1">Introduction à la cybersécurité</b><small>Cisco Networking Academy</small></div></div></div>
+      <div class="col-md-6 col-lg-6 reveal"><div class="cert"><span class="c-ico"><svg class="ic"><use href="#ic-network"/></svg></span><div><b><span data-i18n="cert2">Équipements réseau &amp; configuration</span><span class="badge-progress" data-i18n="in_progress">en cours</span></b><small>Cisco Networking Academy</small></div></div></div>
+      <div class="col-md-6 col-lg-6 reveal"><div class="cert"><span class="c-ico"><svg class="ic"><use href="#ic-shield"/></svg></span><div><b><span data-i18n="cert3">Défense du réseau</span><span class="badge-progress" data-i18n="in_progress2">en cours</span></b><small>Cisco Networking Academy</small></div></div></div>
+      <div class="col-md-6 col-lg-6 reveal"><div class="cert"><span class="c-ico"><svg class="ic"><use href="#ic-brain"/></svg></span><div><b><span data-i18n="cert4">Introduction à l'IA moderne</span><span class="badge-progress" data-i18n="in_progress3">en cours</span></b><small>Cisco Networking Academy</small></div></div></div>
+      <div class="col-md-6 col-lg-6 reveal"><div class="cert"><span class="c-ico"><svg class="ic"><use href="#ic-robot"/></svg></span><div><b><span data-i18n="cert5">Limites et capacités de l'IA</span><span class="badge-progress" data-i18n="in_progress4">en cours</span></b><small>Anthropic</small></div></div></div>
+      <div class="col-md-6 col-lg-6 reveal"><div class="cert"><span class="c-ico"><svg class="ic"><use href="#ic-code"/></svg></span><div><b>Claude Code in Action</b><small>Anthropic</small></div></div></div>
+      <div class="col-md-6 col-lg-6 reveal"><div class="cert"><span class="c-ico"><svg class="ic"><use href="#ic-palette"/></svg></span><div><b data-i18n="cert7">Infographie</b><small data-i18n="cert_training">Formation</small></div></div></div>
+      <div class="col-md-6 col-lg-6 reveal"><div class="cert"><span class="c-ico"><svg class="ic"><use href="#ic-sliders"/></svg></span><div><b data-i18n="cert8">Configuration réseau</b><small data-i18n="cert_training2">Formation</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker"><svg class="ic"><use href="#ic-paper-plane"/></svg><span data-i18n="contact_kicker">Contact</span></span>
+      <h2 data-i18n="contact_title">Me contacter</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6 reveal">
+        <div class="contact-info">
+          <p class="lead" data-i18n="contact_sub">Une question, un projet, une opportunité ? Écrivez-moi via le formulaire ou directement.</p>
+          <div class="c-line"><span class="ico"><svg class="ic"><use href="#ic-envelope"/></svg></span><a href="mailto:douchanikamanejunior@gmail.com">douchanikamanejunior@gmail.com</a></div>
+          <div class="c-line"><span class="ico"><svg class="ic"><use href="#ic-phone"/></svg></span><span>+237 693 22 84 71</span></div>
+          <div class="c-line"><span class="ico"><svg class="ic"><use href="#ic-phone"/></svg></span><span>+237 620 40 22 71</span></div>
+          <div class="c-line"><span class="ico"><svg class="ic"><use href="#ic-github"/></svg></span><a href="https://github.com/nikamanejunior-pixel" target="_blank" rel="noopener">github.com/nikamanejunior-pixel</a></div>
+        </div>
+      </div>
+      <div class="col-lg-6 reveal">
+        <!-- FORMULAIRE : remplace VOTRE_ID_FORMSPREE par ton identifiant Formspree -->
+        <form action="https://formspree.io/f/mpqvlrlg" method="POST">
+          <div>
+            <label for="f-name" data-i18n="form_name">Votre nom</label>
+            <input id="f-name" class="form-control-x" type="text" name="name" required>
+          </div>
+          <div>
+            <label for="f-email" data-i18n="form_email">Votre email</label>
+            <input id="f-email" class="form-control-x" type="email" name="email" required>
+          </div>
+          <div>
+            <label for="f-msg" data-i18n="form_msg">Votre message</label>
+            <textarea id="f-msg" class="form-control-x" name="message" required></textarea>
+          </div>
+          <button class="btn-x primary" type="submit"><svg class="ic"><use href="#ic-paper-plane"/></svg><span data-i18n="form_send">Envoyer le message</span></button>
+          <p class="form-note"><svg class="ic"><use href="#ic-lock"/></svg><span data-i18n="form_note">Le message arrive directement dans ma boîte mail.</span></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="links">
+      <a href="https://github.com/nikamanejunior-pixel" target="_blank" rel="noopener" aria-label="GitHub"><svg class="ic"><use href="#ic-github"/></svg></a>
+      <a href="mailto:douchanikamanejunior@gmail.com" aria-label="Email"><svg class="ic"><use href="#ic-envelope"/></svg></a>
+    </div>
+    <p>© 2026 Doucha Nikamane Junior</p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX GALERIE ============ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Fermer"><svg class="ic"><use href="#ic-close"/></svg></button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Précédent"><svg class="ic"><use href="#ic-prev"/></svg></button>
+  <figure class="lb-figure">
+    <div class="lb-img-wrap"><img class="lb-img" id="lbImg" src="" alt=""></div>
+    <figcaption class="lb-caption"><b id="lbTitle"></b><span id="lbCounter"></span></figcaption>
+    <div class="lb-dots" id="lbDots"></div>
+  </figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Suivant"><svg class="ic"><use href="#ic-next"/></svg></button>
+</div>
+
+<!-- =================================================================
+     SCRIPTS
+     L'ordre de chargement est important :
+       1. jQuery et Bootstrap (bibliothèques)
+       2. i18n     : dictionnaire des traductions
+       3. config   : TES images et liens GitHub  <-- fichier à modifier
+       4. network  : animation du hero
+       5. gallery  : galerie et visionneuse
+       6. theme    : bascule clair / sombre
+       7. main     : menu, langue, défilement, animations
+     ================================================================= -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/network.js"></script>
+<script src="assets/js/gallery.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
